@@ -123,11 +123,13 @@ class _LoginState  extends State<Login>{
   }
 
   _emailLogin({String email, String password, BuildContext context}){
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(
-        builder: (context) => DisplayPokemon(),
-      ),
-    );
+    if((email=="miguelito"&&password=="miguelitoesgenial")) {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => DisplayPokemon(),
+        ),
+      );
+    }
   }
 }
